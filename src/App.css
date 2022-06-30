@@ -1,38 +1,50 @@
-.App {
-  text-align: center;
+body {
+  margin: 1vw;
+  padding: 1vw;
+  font-size: 1.5vw;
+  background-color: palegoldenrod;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+img {
+  height: 20vh;
+  width: 10vw;
+  border-radius: 10px;
+  border: 1px solid black;
+  box-shadow: 3px 7px #585858;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+table {
+  text-align: left;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+th {
+  width: 5vw;
+  margin: 0;
+  padding: 0 1vw;
+}
+tr > td {
+  width: 50vw;
+}
+.navButton {
+  width: 26.5vw;
+  font-size: 2vw;
+  margin: 1vw;
+  border-radius: 5px;
+  background-color: goldenrod;
+  box-shadow: 3px 7px #585858;
+}
+.navButton > button {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.deleteCeleb {
+  width: 6vw;
+  padding: .5vh 1.5vw;
+  margin: 1vw;
+  font-size: 1vw;
+  border-radius: 5px;
+  background-color: goldenrod;
+  box-shadow: 3px 7px #585858;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.trophy {
+font-size: 4vw;
 }
