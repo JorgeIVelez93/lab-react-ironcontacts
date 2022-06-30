@@ -7,7 +7,8 @@ function App() {
   const [remaining, setRemaining] = React.useState(
     contacts.slice(5, contacts.length - 5)
   );
-  const [ascending, setAscending] = React.useState("");
+  const [ascending, setAscending] = React.useState(false);
+  const [pascending, setPAscending] = React.useState(false);
 
   const addContact = () => {
     let num = Math.floor(Math.random() * remaining.length);
@@ -38,13 +39,13 @@ function App() {
     let cloneArr = [...celebs];
 
     cloneArr.sort(function (a, b) {
-      if (ascending) {
+      if (pascending) {
         return a.popularity - b.popularity;
       } else {
         return b.popularity - a.popularity;
       }
     });
-    setAscending(!ascending);
+    setPAscending(!pascending);
     setContacts(cloneArr);
   };
   const deleteContact = (celebtoRemove) => {
@@ -59,14 +60,16 @@ function App() {
   };
   return (
     <div>
+      <h1>Iron Contacts</h1>
+      <h2>Currently viewing {celebs.length} celebrities</h2>
       <button className="navButton" onClick={addContact}>
         Add Random Contact
       </button>
       <button className="navButton" onClick={sortName}>
-        Sort by Name
+        Sort by Name ({ascending ? "A" : "D"})
       </button>
       <button className="navButton" onClick={sortPopularity}>
-        Sort by Popularity
+        Sort by Popularity ({pascending ? "A" : "D"})
       </button>
 
       <table className="table">
